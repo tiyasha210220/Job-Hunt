@@ -6,7 +6,7 @@ import fileUpload from "express-fileupload";
 import UserRouter from "./Routes/UserRoutes.js";
 import ApplicationRouter from "./Routes/ApplicationRoutes.js";
 import JobRouter from "./Routes/JobRoutes.js";
-import { DbConnection } from "./Database/DbConnection.js";
+import { DbConnection } from "./database/DbConnection.js";
 import { errorMiddleware } from "./Middlewares/error.js";
 
 dotenv.config({ path: "./Config/Config.env" });
