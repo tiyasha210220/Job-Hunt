@@ -6,7 +6,7 @@ import {
   getSingleJob,
   postJob,
   updateJob,
-} from "../Controllers/jobController.js";
+} from "../controllers/jobController.js";
 import { isAuthorized } from "../Middlewares/auth.js";
 
 const router = express.Router();
