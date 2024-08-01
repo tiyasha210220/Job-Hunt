@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-import UserRouter from "./routes/userRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 import ApplicationRouter from "./routes/ApplicationRoutes.js";
 import JobRouter from "./routes/JobRoutes.js";
 import { DbConnection } from "./database/DbConnection.js";
@@ -33,7 +33,7 @@ app.use(
   })
 );
 
-app.use("/api/v1/user", UserRouter);
+app.use("/api/v1/user", userRouter);
 app.use("/api/v1/application", ApplicationRouter);
 app.use("/api/v1/job", JobRouter);
 
