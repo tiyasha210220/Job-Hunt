@@ -11,9 +11,9 @@ import { errorMiddleware } from "./Middlewares/error.js";
 
 dotenv.config({ path: "./Config/Config.env" });
 
-const App = express();
+const app = express();
 
-App.use(
+app.use(
   cors({
     origin: [process.env.FRONTEND_URL],
     methods: ["GET", "POST", "DELETE", "PUT"],
@@ -21,24 +21,24 @@ App.use(
   })
 );
 
-App.use(cookieParser());
+app.use(cookieParser());
 
-App.use(express.json());
-App.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-App.use(
+app.use(
   fileUpload({
     useTempFiles: true,
     tempFileDir: "/tmp/",
   })
 );
 
-App.use("/api/v1/user", UserRouter);
-App.use("/api/v1/application", ApplicationRouter);
-App.use("/api/v1/job", JobRouter);
+app.use("/api/v1/user", UserRouter);
+app.use("/api/v1/application", ApplicationRouter);
+app.use("/api/v1/job", JobRouter);
 
 DbConnection();
 
-App.use(errorMiddleware);
+app.use(errorMiddleware);
 
-export default App;
+export default app;

@@ -1,4 +1,4 @@
-import App from "./App.js";
+import App from "./app.js";
 import cloudinary from "cloudinary";
 
 cloudinary.v2.config({
