@@ -3,9 +3,9 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
-import UserRouter from "./Routes/UserRoutes.js";
-import ApplicationRouter from "./Routes/ApplicationRoutes.js";
-import JobRouter from "./Routes/JobRoutes.js";
+import UserRouter from "./routes/UserRoutes.js";
+import ApplicationRouter from "./routes/ApplicationRoutes.js";
+import JobRouter from "./routes/JobRoutes.js";
 import { DbConnection } from "./database/DbConnection.js";
 import { errorMiddleware } from "./Middlewares/error.js";
 
