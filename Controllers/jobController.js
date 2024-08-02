@@ -1,5 +1,5 @@
 import { catchAsyncErrors } from "../Middlewares/catchAsyncError.js";
-import { Job } from "../Models/jobSchema.js";
+import { Job } from "../Models/jobschema.js";
 import ErrorHandler from "../Middlewares/error.js";
 
 export const getAllJobs = catchAsyncErrors(async (req, res, next) => {
