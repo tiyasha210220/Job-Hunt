@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 import userRouter from "./routes/userRoutes.js";
 import ApplicationRouter from "./routes/ApplicationRoutes.js";
-import JobRouter from "./routes/JobRoutes.js";
+import JobRouter from "./routes/jobRoutes.js";
 import { DbConnection } from "./database/DbConnection.js";
 import { errorMiddleware } from "./Middlewares/error.js";
 
