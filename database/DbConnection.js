@@ -4,7 +4,7 @@ import validator from "validator";
 export const DbConnection = () => {
     mongoose
         .connect(process.env.MONGO_URI, {
-            dbName: "JOB_SEEKING" ,
+            dbName: "JOB-HUNT-PORTAL" ,
         })
         .then(() => {
             console.log("connected to database!");
